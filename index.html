@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buonaluce — Buone notizie. Buona luce.</title>
+<!-- PRE-LANCIO: noindex attivo finché non annunciamo ufficialmente il sito. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2316263D'/><circle cx='32' cy='40' r='15' fill='%23FFC93C'/><line x1='11' y1='44' x2='53' y2='44' stroke='%23FFF8EC' stroke-width='4' stroke-linecap='round'/></svg>">
+<style>
+:root{
+  --night:#16263D; --sun:#FFC93C; --amber:#E8A33D;
+  --cream:#FFF8EC; --ink:#24344f; --muted:#6b7688; --soft:#f4f6fa; --line:#e4e9f2;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--soft);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+header{background:var(--cream);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--night)}
+.logo .word{font-family:Georgia,serif;font-size:24px;letter-spacing:-.5px}
+nav a{color:var(--ink);text-decoration:none;font-size:14.5px;margin-left:22px;opacity:.85}
+nav a:hover{opacity:1}
+
+.hero{background:var(--night);color:var(--cream);position:relative;overflow:hidden}
+.hero .in{max-width:820px;margin:0 auto;padding:84px 22px 160px;text-align:center;position:relative;z-index:2}
+.kick{display:inline-block;background:rgba(255,201,60,.14);color:var(--sun);
+  border:1px solid rgba(255,201,60,.35);border-radius:999px;
+  font-size:13px;padding:6px 14px;margin-bottom:22px}
+.hero h1{font-family:Georgia,serif;font-size:56px;line-height:1.08;margin:0 0 18px;font-weight:normal}
+.hero p.sub{font-size:19px;line-height:1.6;color:#cdd8e8;margin:0 auto 34px;max-width:640px}
+form.signup{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+form.signup input{font-size:16px;padding:14px 18px;border-radius:10px;border:1px solid #3a5077;
+  background:#0f1c30;color:var(--cream);width:300px;outline:none}
+form.signup input::placeholder{color:#7d8da9}
+form.signup button{font-size:16px;font-weight:600;padding:14px 26px;border-radius:10px;border:0;
+  background:var(--sun);color:var(--night);cursor:pointer}
+form.signup button:hover{background:#ffd75e}
+.hero .note{font-size:13.5px;color:#93a3bd;margin-top:16px}
+.sun-bottom{position:absolute;left:50%;bottom:-2px;transform:translateX(-50%);width:min(720px,100%);z-index:1}
+
+section.blocks{padding:64px 0 8px}
+h2.sec{font-family:Georgia,serif;font-size:32px;color:var(--night);margin:0 0 8px;font-weight:normal}
+p.secsub{color:var(--muted);margin:0 0 30px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  box-shadow:0 1px 3px rgba(15,25,45,.06)}
+.card .top{height:118px;display:flex;align-items:center;justify-content:center;font-size:54px}
+.card .bd{padding:14px 16px 18px}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:8px}
+.card h3{font-size:16.5px;line-height:1.35;margin:0 0 8px;color:var(--night)}
+.card p{font-size:14px;line-height:1.55;color:#4a566b;margin:0}
+
+.method{background:var(--night);color:var(--cream);margin-top:64px;padding:70px 0}
+.method h2{font-family:Georgia,serif;font-weight:normal;font-size:32px;margin:0 0 10px}
+.method p.lead{color:#b9c6da;margin:0 0 36px;font-size:16px}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.m{background:#1d304f;border:1px solid #2c4266;border-radius:14px;padding:18px}
+.m em{display:inline-block;font-style:normal;font-size:12px;font-weight:800;color:var(--sun);
+  border:1px solid rgba(255,201,60,.45);border-radius:999px;padding:2px 10px;margin-bottom:12px}
+.m b{display:block;font-size:16.5px;margin:0 0 7px;color:#fff}
+.m span{font-size:14px;line-height:1.55;color:#c4d0e2}
+
+footer{background:var(--cream);padding:44px 0 54px;text-align:center;border-top:1px solid var(--line)}
+footer .word{font-family:Georgia,serif;font-size:22px;color:var(--night)}
+footer .so{margin:14px 0 6px;font-size:14.5px;color:var(--ink)}
+footer .so a{color:var(--ink);text-decoration:none;margin:0 9px}
+footer small{color:var(--muted);font-size:12.5px}
+
+@media(max-width:640px){
+  .hero .in{padding:60px 20px 130px}
+  .hero h1{font-size:38px}
+  .hero p.sub{font-size:17px}
+  form.signup input{width:100%}
+  form.signup button{width:100%}
+  nav a:not(:first-child){display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="40" r="14" fill="#FFC93C"/>
+        <g stroke="#E8A33D" stroke-width="4" stroke-linecap="round">
+          <line x1="32" y1="12" x2="32" y2="20"/>
+          <line x1="12" y1="20" x2="18" y2="26"/>
+          <line x1="52" y1="20" x2="46" y2="26"/>
+        </g>
+        <line x1="10" y1="44" x2="54" y2="44" stroke="#16263D" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+      <span class="word">buonaluce</span>
+    </a>
+    <nav>
+      <a href="#numeri">La newsletter</a>
+      <a href="#metodo">Il metodo</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="in">
+    <span class="kick">Numero 1 — in arrivo lunedì</span>
+    <h1>Buone notizie.<br>Buona luce.</h1>
+    <p class="sub">Ogni lunedì, cinque minuti di storie vere che fanno bene: animali, bambini, scoperte, persone comuni. Da tutto il mondo, <b>verificate una per una</b>.</p>
+    <form class="signup" action="#" onsubmit="return false">
+      <input type="email" placeholder="la tua email" aria-label="Email">
+      <button type="button">Iscrivimi</button>
+    </form>
+    <p class="note">Gratis. Niente spam. Solo buona luce — una volta a settimana.</p>
+  </div>
+  <svg class="sun-bottom" viewBox="0 0 720 190" aria-hidden="true">
+    <circle cx="360" cy="190" r="130" fill="#FFC93C"/>
+    <g stroke="#E8A33D" stroke-width="10" stroke-linecap="round">
+      <line x1="360" y1="30" x2="360" y2="58"/>
+      <line x1="243" y1="66" x2="263" y2="86"/>
+      <line x1="477" y1="66" x2="457" y2="86"/>
+    </g>
+    <line x1="180" y1="186" x2="540" y2="186" stroke="#FFF8EC" stroke-width="8" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<section class="blocks" id="numeri">
+  <div class="wrap">
+    <h2 class="sec">Cosa leggerai presto</h2>
+    <p class="secsub">Un assaggio delle storie in lavorazione per i primi numeri. Tutte con fonte e link, come sempre.</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="top" style="background:#FFF4D8">🦢</div>
+        <div class="bd">
+          <span class="tag">Animali · Regno Unito</span>
+          <h3>Il cigno che si è lasciato liberare</h3>
+          <p>Impigliato in un filo da pesca, liberato a mani nude — con mamma e papà cigno che gli nuotavano intorno. Ora nuota di nuovo.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top" style="background:#EAF4FF">🐶</div>
+        <div class="bd">
+          <span class="tag">Animali · Stati Uniti</span>
+          <h3>Il colloquio è andato bene: cane smarrito entra in commissariato</h3>
+          <p>A Tampa si è "autodenunciato" da solo. Due ore dopo era tra le braccia della sua umana.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top" style="background:#FFF0EA">🐱</div>
+        <div class="bd">
+          <span class="tag">Animali · Stati Uniti</span>
+          <h3>I gatti dei rifugi tornano al lavoro: fine dell'eutanasia</h3>
+          <p>Il programma "barn cats": nelle fattorie c'è chi ha bisogno di loro. Una seconda vita, con un mestiere.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top" style="background:#EDF7EE">🎈</div>
+        <div class="bd">
+          <span class="tag">Bambini · Italia</span>
+          <h3>Il piccolo Andrea ha abbracciato la mamma</h3>
+          <p>A Patti è arrivata la notizia che aspettavamo: prognosi sciolta. Le buone notizie più grandi stanno in un abbraccio.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top" style="background:#FFF4D8">🐕</div>
+        <div class="bd">
+          <span class="tag">Animali · Italia</span>
+          <h3>Florzinha e i suoi 7 cuccioli: protetti fino all'ultimo</h3>
+          <p>Abbandonata in un campo con i piccoli, mamma cane non si è mossa finché non sono arrivati i soccorsi. Salvi tutti.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top" style="background:#EAF4FF">🐈</div>
+        <div class="bd">
+          <span class="tag">Animali · Italia</span>
+          <h3>Venti metri sotto terra, due giorni: il gattino è tornato su</h3>
+          <p>A Salerno i vigili del fuoco non si sono arresi. Il video del salvataggio è pura gioia.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="method" id="metodo">
+  <div class="wrap">
+    <h2>Il nostro metodo, in breve</h2>
+    <p class="lead">La regola di casa: se non è verificata, non esiste per noi. Ogni storia passa da quattro porte.</p>
+    <div class="mgrid">
+      <div class="m"><em>1</em><b>È vera</b><span>Fonte primaria o due fonti indipendenti. Ogni voce linka la fonte originale: puoi sempre risalire alla radice.</span></div>
+      <div class="m"><em>2</em><b>È recente</b><span>Niente storie riciclate spacciate per nuove: verifichiamo la data reale, sempre.</span></div>
+      <div class="m"><em>3</em><b>Ha un "come"</b><span>Raccontiamo cosa funziona e perché. La speranza senza metodo è pubblicità.</span></div>
+      <div class="m"><em>4</em><b>Tutti protagonisti</b><span>Chi entra in una nostra storia non è un caso, non è un trofeo, non è una figurina. È un protagonista, con la sua dignità e il suo carattere.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contatti">
+  <div class="wrap">
+    <div class="word">buonaluce</div>
+    <div class="so">
+      <a href="#">YouTube @buonaluce</a> ·
+      <a href="#">Instagram @buonalucenews</a> ·
+      <a href="#">TikTok @buonaluce</a>
+    </div>
+    <small>© 2026 Buonaluce · buonaluce.it · Il mondo, dalla parte che funziona.</small>
+  </div>
+</footer>
+
+</body>
+</html>
