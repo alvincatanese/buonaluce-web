@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Buonaluce — Buone notizie. Buona luce.</title>
-<!-- PRE-LANCIO: noindex attivo finché non annunciamo ufficialmente il sito. -->
 <meta name="robots" content="index, follow">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2316263D'/><circle cx='32' cy='40' r='15' fill='%23FFC93C'/><line x1='11' y1='44' x2='53' y2='44' stroke='%23FFF8EC' stroke-width='4' stroke-linecap='round'/></svg>">
 <style>
@@ -80,13 +79,14 @@ footer small{color:var(--muted);font-size:12.5px}
   nav a:not(:first-child){display:none}
 }
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
 input,button{font-family:inherit}
 .mgrid{grid-template-columns:repeat(2,1fr)}
 @media (max-width:560px){.mgrid{grid-template-columns:1fr}}
+footer .contact{margin:6px 0 10px}
+footer .contact a{color:var(--night);text-decoration-color:#E8A33D;text-underline-offset:3px}
 </style>
 </head>
 <body>
@@ -137,61 +137,60 @@ input,button{font-family:inherit}
 
 <section class="blocks" id="numeri">
   <div class="wrap">
-    <h2 class="sec">Cosa leggerai presto</h2>
-    <p class="secsub">Un assaggio delle storie in lavorazione per i primi numeri. Tutte con fonte e link, come sempre.</p>
+    <h2 class="sec">Nel Numero 1</h2>
+    <p class="secsub">Le storie del primo numero. Nella newsletter ognuna ha la sua fonte linkata.</p>
     <div class="grid">
-
       <div class="card">
-        <div class="top" style="background:#FFF4D8">🦢</div>
+        <div class="top" style="background:#FFF4D8"><span aria-hidden="true">🐕</span></div>
         <div class="bd">
-          <span class="tag">Animali · Regno Unito</span>
-          <h3>Il cigno che si è lasciato liberare</h3>
-          <p>Impigliato in un filo da pesca, liberato a mani nude — con mamma e papà cigno che gli nuotavano intorno. Ora nuota di nuovo.</p>
+          <span class="tag">Animali · Brasile</span>
+          <h3>Florzinha, la mamma che non si è mai mossa</h3>
+          <p>Abbandonata sotto la pioggia con sette cuccioli, è rimasta accanto a loro finché non sono arrivati i volontari. Oggi hanno tutti una casa, tranne una.</p>
         </div>
       </div>
 
       <div class="card">
-        <div class="top" style="background:#EAF4FF">🐶</div>
+        <div class="top" style="background:#EAF4FF"><span aria-hidden="true">🐶</span></div>
         <div class="bd">
           <span class="tag">Animali · Stati Uniti</span>
-          <h3>Il colloquio è andato bene: cane smarrito entra in commissariato</h3>
-          <p>A Tampa si è "autodenunciato" da solo. Due ore dopo era tra le braccia della sua umana.</p>
+          <h3>Il cane che si è presentato in commissariato</h3>
+          <p>A Tampa un pastore tedesco smarrito si è fermato alla porta della polizia. Grazie al microchip è tornato dalla sua famiglia.</p>
         </div>
       </div>
 
       <div class="card">
-        <div class="top" style="background:#FFF0EA">🐱</div>
+        <div class="top" style="background:#FFF4D8"><span aria-hidden="true">🦢</span></div>
+        <div class="bd">
+          <span class="tag">Animali</span>
+          <h3>Il cigno ferito e la mamma che non si sposta</h3>
+          <p>Un amo da pesca nel becco, una squadra di soccorritori e una madre che sorveglia ogni gesto. Il piccolo è stato liberato.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top" style="background:#EAF4FF"><span aria-hidden="true">🐈</span></div>
+        <div class="bd">
+          <span class="tag">Animali · Italia</span>
+          <h3>Venti metri di pozzo, un gattino salvato</h3>
+          <p>A Castel San Giorgio, due giorni al buio. Lo ha riportato su una gabbia-trappola calata con la Protezione Civile.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top" style="background:#EDF7EE"><span aria-hidden="true">🐩</span></div>
+        <div class="bd">
+          <span class="tag">Animali · Italia</span>
+          <h3>Fiocco, l'ultimo dei ventitré</h3>
+          <p>Salvati da un allevamento abusivo vicino a Vicenza, i barboncini hanno trovato casa uno dopo l'altro. Fiocco è stato l'ultimo.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top" style="background:#FFF0EA"><span aria-hidden="true">🐱</span></div>
         <div class="bd">
           <span class="tag">Animali · Stati Uniti</span>
-          <h3>I gatti dei rifugi tornano al lavoro: fine dell'eutanasia</h3>
-          <p>Il programma "barn cats": nelle fattorie c'è chi ha bisogno di loro. Una seconda vita, con un mestiere.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="top" style="background:#EDF7EE">🎈</div>
-        <div class="bd">
-          <span class="tag">Bambini · Italia</span>
-          <h3>Il piccolo Andrea ha abbracciato la mamma</h3>
-          <p>A Patti è arrivata la notizia che aspettavamo: prognosi sciolta. Le buone notizie più grandi stanno in un abbraccio.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="top" style="background:#FFF4D8">🐕</div>
-        <div class="bd">
-          <span class="tag">Animali · Italia</span>
-          <h3>Florzinha e i suoi 7 cuccioli: protetti fino all'ultimo</h3>
-          <p>Abbandonata in un campo con i piccoli, mamma cane non si è mossa finché non sono arrivati i soccorsi. Salvi tutti.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="top" style="background:#EAF4FF">🐈</div>
-        <div class="bd">
-          <span class="tag">Animali · Italia</span>
-          <h3>Venti metri sotto terra, due giorni: il gattino è tornato su</h3>
-          <p>A Salerno i vigili del fuoco non si sono arresi. Il video del salvataggio è pura gioia.</p>
+          <h3>I gatti che hanno trovato un lavoro</h3>
+          <p>I "barn cats": gatti che non si adattano alla vita in casa vengono affidati a fattorie e fienili invece di restare nei rifugi.</p>
         </div>
       </div>
 
@@ -204,7 +203,7 @@ input,button{font-family:inherit}
     <h2>Il nostro metodo, in breve</h2>
     <p class="lead">La regola di casa: se non è verificata, non esiste per noi. Ogni storia passa da quattro porte.</p>
     <div class="mgrid">
-      <div class="m"><em>1</em><b>È vera</b><span>Fonte primaria o due fonti indipendenti. Ogni voce linka la fonte originale: puoi sempre risalire alla radice.</span></div>
+      <div class="m"><em>1</em><b>È vera</b><span>Ogni storia linka la sua fonte, così puoi controllare tu stesso. Quando c'è, risaliamo alla fonte primaria.</span></div>
       <div class="m"><em>2</em><b>È recente</b><span>Niente storie riciclate spacciate per nuove: verifichiamo la data reale, sempre.</span></div>
       <div class="m"><em>3</em><b>Ha un "come"</b><span>Raccontiamo cosa funziona e perché. La speranza senza metodo è pubblicità.</span></div>
       <div class="m"><em>4</em><b>Tutti protagonisti</b><span>Chi entra in una nostra storia non è un caso, non è un trofeo, non è una figurina. È un protagonista, con la sua dignità e il suo carattere.</span></div>
@@ -220,7 +219,8 @@ input,button{font-family:inherit}
       <a href="https://instagram.com/buonalucenews">Instagram @buonalucenews</a> ·
       <a href="https://tiktok.com/@buonaluce">TikTok @buonaluce</a>
     </div>
-    <small>© 2026 Buonaluce · buonaluce.it · Il mondo, dalla parte che funziona.</small>
+    <p class="contact">Scrivici: <a href="mailto:buonalucenews@gmail.com">buonalucenews@gmail.com</a></p>
+    <small>© 2026 Buonaluce · Newsletter indipendente, non registrata come testata giornalistica · Buone notizie. Buona luce.</small>
   </div>
 </footer>
 
