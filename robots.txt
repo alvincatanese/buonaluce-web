@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://buonaluce.it/sitemap.xml
+Disallow: /
