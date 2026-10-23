@@ -14,14 +14,14 @@
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--soft);color:var(--ink);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   -webkit-font-smoothing:antialiased}
 .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
 
 header{background:var(--cream);border-bottom:1px solid var(--line)}
 .hd{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--night)}
-.logo .word{font-family:Georgia,serif;font-size:24px;letter-spacing:-.5px}
+.logo .word{font-family:"Fraunces",Georgia,serif;font-size:24px;letter-spacing:-.5px}
 nav a{color:var(--ink);text-decoration:none;font-size:14.5px;margin-left:22px;opacity:.85}
 nav a:hover{opacity:1}
 
@@ -30,7 +30,7 @@ nav a:hover{opacity:1}
 .kick{display:inline-block;background:rgba(255,201,60,.14);color:var(--sun);
   border:1px solid rgba(255,201,60,.35);border-radius:999px;
   font-size:13px;padding:6px 14px;margin-bottom:22px}
-.hero h1{font-family:Georgia,serif;font-size:56px;line-height:1.08;margin:0 0 18px;font-weight:normal}
+.hero h1{font-family:"Fraunces",Georgia,serif;font-size:56px;line-height:1.08;margin:0 0 18px;font-weight:normal}
 .hero p.sub{font-size:19px;line-height:1.6;color:#cdd8e8;margin:0 auto 34px;max-width:640px}
 form.signup{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 form.signup input{font-size:16px;padding:14px 18px;border-radius:10px;border:1px solid #3a5077;
@@ -43,7 +43,7 @@ form.signup button:hover{background:#ffd75e}
 .sun-bottom{position:absolute;left:50%;bottom:-2px;transform:translateX(-50%);width:min(720px,100%);z-index:1}
 
 section.blocks{padding:64px 0 8px}
-h2.sec{font-family:Georgia,serif;font-size:32px;color:var(--night);margin:0 0 8px;font-weight:normal}
+h2.sec{font-family:"Fraunces",Georgia,serif;font-size:32px;color:var(--night);margin:0 0 8px;font-weight:normal}
 p.secsub{color:var(--muted);margin:0 0 30px;font-size:16px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
 .card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;
@@ -56,9 +56,9 @@ p.secsub{color:var(--muted);margin:0 0 30px;font-size:16px}
 .card p{font-size:14px;line-height:1.55;color:#4a566b;margin:0}
 
 .method{background:var(--night);color:var(--cream);margin-top:64px;padding:70px 0}
-.method h2{font-family:Georgia,serif;font-weight:normal;font-size:32px;margin:0 0 10px}
+.method h2{font-family:"Fraunces",Georgia,serif;font-weight:normal;font-size:32px;margin:0 0 10px}
 .method p.lead{color:#b9c6da;margin:0 0 36px;font-size:16px}
-.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px}
 .m{background:#1d304f;border:1px solid #2c4266;border-radius:14px;padding:18px}
 .m em{display:inline-block;font-style:normal;font-size:12px;font-weight:800;color:var(--sun);
   border:1px solid rgba(255,201,60,.45);border-radius:999px;padding:2px 10px;margin-bottom:12px}
@@ -66,7 +66,7 @@ p.secsub{color:var(--muted);margin:0 0 30px;font-size:16px}
 .m span{font-size:14px;line-height:1.55;color:#c4d0e2}
 
 footer{background:var(--cream);padding:44px 0 54px;text-align:center;border-top:1px solid var(--line)}
-footer .word{font-family:Georgia,serif;font-size:22px;color:var(--night)}
+footer .word{font-family:"Fraunces",Georgia,serif;font-size:22px;color:var(--night)}
 footer .so{margin:14px 0 6px;font-size:14.5px;color:var(--ink)}
 footer .so a{color:var(--ink);text-decoration:none;margin:0 9px}
 footer small{color:var(--muted);font-size:12.5px}
@@ -79,6 +79,14 @@ footer small{color:var(--muted);font-size:12.5px}
   form.signup button{width:100%}
   nav a:not(:first-child){display:none}
 }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+input,button{font-family:inherit}
+.mgrid{grid-template-columns:repeat(2,1fr)}
+@media (max-width:560px){.mgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -95,7 +103,7 @@ footer small{color:var(--muted);font-size:12.5px}
         </g>
         <line x1="10" y1="44" x2="54" y2="44" stroke="#16263D" stroke-width="3.5" stroke-linecap="round"/>
       </svg>
-      <span class="word">buonaluce</span>
+      <span class="word">Buonaluce</span>
     </a>
     <nav>
       <a href="#numeri">La newsletter</a>
@@ -109,7 +117,7 @@ footer small{color:var(--muted);font-size:12.5px}
   <div class="in">
     <span class="kick">Numero 1 — in arrivo lunedì</span>
     <h1>Buone notizie.<br>Buona luce.</h1>
-    <p class="sub">Ogni lunedì, cinque minuti di storie vere che fanno bene: animali, bambini, scoperte, persone comuni. Da tutto il mondo, <b>verificate una per una</b>.</p>
+    <p class="sub">Ogni lunedì, sette minuti di storie vere che fanno bene: animali, bambini, scoperte, persone comuni. Da tutto il mondo, <b>verificate una per una</b>.</p>
     <form class="signup" action="https://buonaluce.beehiiv.com/subscribe" method="get" target="_blank">
       <input type="email" name="email" required placeholder="la tua email" aria-label="Email">
       <button type="submit">Iscrivimi</button>
@@ -206,7 +214,7 @@ footer small{color:var(--muted);font-size:12.5px}
 
 <footer id="contatti">
   <div class="wrap">
-    <div class="word">buonaluce</div>
+    <div class="word">Buonaluce</div>
     <div class="so">
       <a href="https://youtube.com/@buonaluce">YouTube @buonaluce</a> ·
       <a href="https://instagram.com/buonalucenews">Instagram @buonalucenews</a> ·
