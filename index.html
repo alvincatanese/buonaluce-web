@@ -136,6 +136,10 @@ footer small{color:var(--muted);font-size:12.5px;line-height:1.6}
 /* il loader di beehiiv a volte lascia il contenitore alto 0 (es. su mobile): altezza fissa */
 .bh-embed>div>div{height:60px!important;overflow:hidden}
 .bh-embed iframe{height:60px!important}
+.bh-fallback{text-align:center}
+.bh-btn{display:inline-block;min-width:220px;background:#FFC93C;color:#16263D;font-size:17px;font-weight:700;padding:15px 34px;border-radius:12px;text-decoration:none}
+.bh-btn:hover{background:#ffd75e}
+.bh-embed.fallback>div:not(.bh-fallback){display:none}
 </style>
 </head>
 <body>
@@ -166,7 +170,7 @@ footer small{color:var(--muted);font-size:12.5px;line-height:1.6}
     <span class="kick">Numero 1 — in arrivo lunedì 26 ottobre</span>
     <h1>Buone notizie.<br>Buona luce.</h1>
     <p class="sub">Ogni lunedì, cinque minuti di storie vere che fanno bene, da tutto il mondo, <b>verificate una per una</b>.</p>
-    <div class="bh-embed"><script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="6dc48978-a705-4f5b-9cf0-eadd3475f4ca"></script></div>
+    <div class="bh-embed"><script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="6dc48978-a705-4f5b-9cf0-eadd3475f4ca"></script><div class="bh-fallback" hidden><a class="bh-btn" href="https://buonaluce.beehiiv.com/subscribe">Iscriviti</a></div></div>
     <p class="note">Gratis · ogni lunedì · ti disiscrivi in un clic<br>Iscrivendoti accetti l'<a href="privacy.html">informativa privacy</a></p>
   </div>
   <svg class="sun-bottom" viewBox="0 0 720 190" aria-hidden="true">
@@ -242,7 +246,7 @@ footer small{color:var(--muted);font-size:12.5px;line-height:1.6}
   <div class="wrap">
     <h2 id="t-final">Pronti per lunedì?</h2>
     <p class="lead">Cinque minuti di storie vere che fanno bene, nella tua casella ogni lunedì.</p>
-    <div class="bh-embed"><script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="6dc48978-a705-4f5b-9cf0-eadd3475f4ca"></script></div>
+    <div class="bh-embed"><script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="6dc48978-a705-4f5b-9cf0-eadd3475f4ca"></script><div class="bh-fallback" hidden><a class="bh-btn" href="https://buonaluce.beehiiv.com/subscribe">Iscriviti</a></div></div>
     <p class="note">Gratis · ogni lunedì · ti disiscrivi in un clic<br>Iscrivendoti accetti l'<a href="privacy.html">informativa privacy</a></p>
   </div>
 </section>
@@ -268,6 +272,11 @@ footer small{color:var(--muted);font-size:12.5px;line-height:1.6}
 </footer>
 
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "f384133f14b443f5b8f9c720d23fc171"}'></script><!-- End Cloudflare Web Analytics -->
+<script>
+/* Se il modulo beehiiv non si carica (es. Safari su iPhone blocca il controllo anti-bot nel riquadro), mostra il pulsante di riserva */
+(function(){var ok=false;window.addEventListener('message',function(e){if(e.origin==='https://subscribe-forms.beehiiv.com'&&e.data&&e.data.type==='beehiiv:child-loaded'){ok=true}});
+setTimeout(function(){if(ok)return;document.querySelectorAll('.bh-embed').forEach(function(el){el.classList.add('fallback');var f=el.querySelector('.bh-fallback');if(f)f.hidden=false})},4000)})();
+</script>
 <script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
 </body>
 </html>
