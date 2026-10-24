@@ -133,6 +133,9 @@ footer small{color:var(--muted);font-size:12.5px;line-height:1.6}
 <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>input,button{font-family:inherit}.bh-embed{max-width:480px;margin:0 auto;min-height:60px}
+/* il loader di beehiiv a volte lascia il contenitore alto 0 (es. su mobile): altezza fissa */
+.bh-embed>div>div{height:60px!important;overflow:hidden}
+.bh-embed iframe{height:60px!important}
 </style>
 </head>
 <body>
