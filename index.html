@@ -83,12 +83,17 @@ p.secsub{color:var(--muted);margin:0 0 30px;font-size:16px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
 .card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;
   box-shadow:0 1px 3px rgba(15,25,45,.06)}
-.card .top{height:118px;display:flex;align-items:center;justify-content:center;font-size:54px}
+.card .top{margin:0;aspect-ratio:16/10;background:#e9edf3;overflow:hidden}
+.card .top img{width:100%;height:100%;object-fit:cover;display:block}
+.card .cred{display:block;margin-top:10px;font-size:11.5px;color:#6b7688}
+.card .cred a{color:inherit}
+.teaser-cta{text-align:center;margin:28px 0 0;font-size:17px;color:var(--night)}
+.teaser-cta a{font-weight:700;color:var(--night);text-decoration-color:#E8A33D;text-underline-offset:3px}
 .card .bd{padding:14px 16px 18px}
 .tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
   color:var(--amberdk);margin-bottom:8px}
-.card h3{font-size:16.5px;line-height:1.35;margin:0 0 8px;color:var(--night)}
-.card p{font-size:14px;line-height:1.55;color:#4a566b;margin:0}
+.card h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:19px;line-height:1.35;margin:0 0 8px;color:var(--night)}
+.card p{font-size:15.5px;line-height:1.55;color:#4a566b;margin:0}
 
 .method{background:var(--night);color:var(--cream);margin-top:64px;padding:70px 0}
 .method h2{font-family:"Fraunces",Georgia,serif;font-weight:normal;font-size:32px;margin:0 0 10px}
@@ -155,7 +160,7 @@ footer small{color:var(--muted);font-size:12.5px;line-height:1.6}
 <main id="contenuto">
 <div class="hero" id="iscriviti">
   <div class="in">
-    <span class="kick">Numero 1 — in arrivo lunedì</span>
+    <span class="kick">Numero 1 — in arrivo lunedì 26 ottobre</span>
     <h1>Buone notizie.<br>Buona luce.</h1>
     <p class="sub">Ogni lunedì, cinque minuti di storie vere che fanno bene, da tutto il mondo, <b>verificate una per una</b>.</p>
     <div class="bh-embed"><script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="6dc48978-a705-4f5b-9cf0-eadd3475f4ca"></script></div>
@@ -170,45 +175,49 @@ footer small{color:var(--muted);font-size:12.5px;line-height:1.6}
 
 <section class="blocks" id="numeri" aria-labelledby="t-numeri">
   <div class="wrap">
+    <!-- PROSSIMO-NUMERO:INIZIO (generato da strumenti/aggiorna_home.py: non modificare a mano) -->
     <h2 class="sec" id="t-numeri">Nel Numero 1</h2>
-    <p class="secsub">Le storie del primo numero. Nella newsletter ognuna ha la sua fonte linkata.</p>
+    <p class="secsub">Le storie che arrivano lunedì 26 ottobre. Nella newsletter ognuna ha la sua fonte linkata.</p>
     <div class="grid">
       <article class="card">
-        <div class="top" style="background:#FFF4D8"><span aria-hidden="true">🐕</span></div>
+        <figure class="top"><img src="img/card-foto-florzinha.jpg" alt="Una mamma cane con i suoi cuccioli (foto di repertorio)" width="640" height="400" loading="lazy"></figure>
         <div class="bd">
           <span class="tag">Animali · Brasile</span>
           <h3>Florzinha, la mamma che non si è mai mossa</h3>
-          <p>Abbandonata sotto la pioggia con sette cuccioli, è rimasta con loro finché non sono arrivati i volontari. Oggi quasi tutti hanno una casa.</p>
+          <p>Pioggia, freddo, sette cuccioli e nessuno intorno. Lei ha scelto di restare. Quello che è successo dopo non se l&#x27;aspettava nessuno.</p>
+          <small class="cred">Foto di repertorio · <a href="https://unsplash.com/it/foto/una-madre-cane-golden-retriever-che-nutre-i-suoi-cuccioli-sullerba-7TNpPt0-5SY" rel="noopener">Anna Khromova</a> / Unsplash</small>
         </div>
       </article>
-
       <article class="card">
-        <div class="top" style="background:#EAF4FF"><span aria-hidden="true">🐈</span></div>
+        <figure class="top"><img src="img/card-foto-gattino.jpg" alt="Un gattino tenuto in mano (foto di repertorio)" width="640" height="400" loading="lazy"></figure>
         <div class="bd">
           <span class="tag">Animali · Italia</span>
-          <h3>Il gattino nel pozzo</h3>
-          <p>A Castel San Giorgio ha passato due giorni in un pozzo di venti metri. Lo ha riportato su una gabbia-trappola calata con la Protezione Civile.</p>
+          <h3>Venti metri di buio</h3>
+          <p>Per due giorni, un miagolio dal fondo di un pozzo dove nessuno riusciva a scendere. Poi qualcuno ha avuto un&#x27;idea.</p>
+          <small class="cred">Foto di repertorio · <a href="https://unsplash.com/it/foto/una-persona-che-tiene-in-mano-un-piccolo-gattino-bianco-qqT6nYoG5xg" rel="noopener">Judy Beth Morris</a> / Unsplash</small>
         </div>
       </article>
-
       <article class="card">
-        <div class="top" style="background:#EDF7EE"><span aria-hidden="true">🏥</span></div>
+        <figure class="top"><img src="img/card-foto-ben.jpg" alt="Forniture mediche (foto di repertorio)" width="640" height="400" loading="lazy"></figure>
         <div class="bd">
           <span class="tag">Persone · Stati Uniti</span>
-          <h3>Ben, 16 anni, e le forniture salvate</h3>
-          <p>In Ohio recupera forniture mediche sterili che gli ospedali butterebbero e le manda a cliniche che ne hanno bisogno: circa 13.600 kg finora.</p>
+          <h3>Ha 16 anni e ha cambiato il destino di 13 tonnellate</h3>
+          <p>Gli ospedali le buttavano via. Un ragazzo dell&#x27;Ohio ha deciso di no, e adesso arrivano dall&#x27;altra parte del mondo.</p>
+          <small class="cred">Foto di repertorio · <a href="https://unsplash.com/it/foto/stetoscopio-e-forniture-mediche-su-bianco-S1v7hVUiCg0" rel="noopener">Julia Zyablova</a> / Unsplash</small>
         </div>
       </article>
-
       <article class="card">
-        <div class="top" style="background:#FFF0EA"><span aria-hidden="true">🏃</span></div>
+        <figure class="top"><img src="img/card-foto-goodgym.jpg" alt="Una persona che corre al tramonto (foto di repertorio)" width="640" height="400" loading="lazy"></figure>
         <div class="bd">
           <span class="tag">Persone · Regno Unito</span>
-          <h3>Correre per chi è solo</h3>
-          <p>I volontari di GoodGym corrono per fare visita ad anziani isolati. Uno studio su quasi 2.900 iscritti mostra che fa bene anche a loro: meno solitudine, più salute mentale.</p>
+          <h3>La corsa più utile della settimana</h3>
+          <p>Migliaia di persone si allacciano le scarpe per andare a bussare alla porta di chi è solo. E uno studio ha scoperto una cosa che nessuno aveva previsto.</p>
+          <small class="cred">Foto di repertorio · <a href="https://unsplash.com/it/foto/donna-che-corre-nella-luce-dellora-dorata-a6FHROHuQ9o" rel="noopener">McCarthy Beckan</a> / Unsplash</small>
         </div>
       </article>
     </div>
+    <p class="teaser-cta">Il finale lo trovi lunedì 26 ottobre nella newsletter. <a href="#iscriviti">Iscriviti, è gratis</a></p>
+    <!-- PROSSIMO-NUMERO:FINE -->
   </div>
 </section>
 
